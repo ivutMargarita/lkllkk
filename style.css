@@ -19,7 +19,7 @@ header, footer {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* По умолчанию, расположение в столбик */
     flex-grow: 1;
 }
 
@@ -69,6 +69,11 @@ footer {
     }
 
     main {
-        flex-direction: row;
+        flex-direction: row; /* При ширине экрана >= 600px - расположение в строку */
+    }
+}
+@media (max-width: 600px) {
+    main {
+        flex-direction: column; /* При ширине экрана до 600px - расположение в столбик */
     }
 }
